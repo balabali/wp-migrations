@@ -4,7 +4,7 @@ WP Migrations can be used by WordPress plugins to handle specific actions during
 in a structured and more readable approach, to specify processes that will be executed at which plugin version, 
 by using `up()` and `down()` method on `WP_Migration` interface.
 
-Check out the [example plugin](https://github.com/Adhik/wp-migrations-example) on how to use it.
+Check out the [example plugin](https://github.com/balabali/wp-migrations-example) on how to use it.
 
 ## Usage
 
