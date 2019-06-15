@@ -189,8 +189,10 @@ if ( ! class_exists( 'WP_Migrations' ) ) {
 
 			for ( end( $migrations ); ( $version = key( $migrations ) ) !== null; prev( $migrations ) ) {
 
-				// only when $version
-				if ( version_compare( $version, $current_version, '>' ) && version_compare( $version, $saved_version, '<=' ) ) {
+				// execute migration files with version number that are bigger than $current_version,
+				// and less than or equals $saved_version
+				if ( version_compare( $version, $current_version, '>' ) &&
+				     version_compare( $version, $saved_version, '<=' ) ) {
 
 					$classes = current( $migrations );
 
